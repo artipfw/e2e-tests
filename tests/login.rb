@@ -7,4 +7,4 @@ fill_in "username", with: "user"
 fill_in "password", with: "password"
 click_button("Log in")
 
-assert! page.has_content?("Logged in as User Name")
+assert! evaluate_script('$.cookie("logged_in") != null && $.cookie("logged_in") != ""')
