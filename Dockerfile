@@ -1,4 +1,4 @@
-FROM nixos/nix:1.11
+FROM nixos/nix:2.3.4
 
 WORKDIR /e2etests
 COPY runner/ /e2etest/runner
