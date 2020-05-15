@@ -11,9 +11,6 @@ load_images = 'true'
 
 
 Capybara.current_driver = :poltergeist
-Capybara.default_host = "http://socks-shop.deadlock.space"
-Capybara.app_host = "http://socks-shop.deadlock.space"
-Capybara.config.default_host = "http://socks-shop.deadlock.space"
 
 Capybara.register_driver :poltergeist do |app|
   Capybara::Poltergeist::Driver.new(
