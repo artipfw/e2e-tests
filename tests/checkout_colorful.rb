@@ -1,5 +1,8 @@
 base_url = ENV["URL"]
 
+# By Default Capybara doesn't clean cookies between tests
+Capybara.current_session.driver.browser.clear_cookies
+
 # Visit the featured "Holy" sock from the front page
 visit("http://#{base_url}/")
 click_link "Colourful"

@@ -1,6 +1,9 @@
 # Add the Holy sock to the cart
 base_url = ENV["URL"]
 
+# By Default Capybara doesn't clean cookies between tests
+Capybara.current_session.driver.browser.clear_cookies
+
 visit("http://#{base_url}/")
 click_link "Holy"
 
