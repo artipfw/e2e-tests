@@ -22,7 +22,7 @@ click_on("1 item(s) in cart")
 has_content?("1 item(s) in cart")
 
 # Check for correct Subtotal value on order page
-cartTotal == page.find('th#cartTotal').text
+cartTotal = page.find('th#cartTotal').text
 assert! page.find('th#orderSubtotal').text == cartTotal
 
 # Address isn't works properly on the site, so using login
